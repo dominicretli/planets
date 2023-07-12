@@ -1,0 +1,36 @@
+<div class="table-container">
+  <h1>Planets</h1>
+
+  <table *ngIf="planets.length > 0 && !error">
+    <tr>
+      <th>Name</th>
+      <th>Climate</th>
+      <th>Residents</th>
+      <th>Terrains</th>
+      <th>Population</th>
+      <th>Water-Covered Surface Area (km<sup>2</sup>)</th>
+    </tr>
+
+    <tr *ngFor="let planet of planets">
+      <td>
+        <a href="{{planet.url}}" target="_blank" rel="noopener noreferrer" title="learn more about {{planet.name}}">{{planet.name}}</a>
+      </td>
+      <td>{{planet.climate | unknownToQuestionMark}}</td>
+      <td>{{planet.residents.length.toString() | decimalSpace}}</td>
+      <td>{{planet.terrain | unknownToQuestionMark}}</td>
+      <td>{{planet.population | decimalSpace | unknownToQuestionMark}}</td>
+      <td>{{getSurfaceAreaCoveredByWater(planet.diameter, planet.surface_water) | decimalSpace | unknownToQuestionMark}}</td>
+    </tr>
+  </table>
+
+  <div *ngIf="error" class="error-container">
+    <p>ERROR: Could not fetch planet data.</p>
+  </div>
+
+  <div *ngIf="planets.length === 0 && !error" class="loading-container">
+    <p>LOADING...</p>
+    <img src="assets/loading-saturn.gif">
+  </div>
+
+</div>
+
