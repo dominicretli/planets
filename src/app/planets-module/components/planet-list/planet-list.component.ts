@@ -11,25 +11,23 @@ export class PlanetListComponent implements OnInit {
   planets: Planet[] = [];
   error: boolean = false;
 
-  constructor(private planetService: PlanetService) {
-  }
+  constructor(private planetService: PlanetService) {}
 
   ngOnInit(): void {
     this.planetService.getPlanets()
       .subscribe({
         next: (res) => {
-          this.planets = res.results.sort((p1,p2) => p1.name.localeCompare(p2.name));
+          this.planets = res.results.sort((p1, p2) => p1.name.localeCompare(p2.name));
           this.error = false;
         },
         error: (error) => {
           this.error = true;
         }
       })
-
   }
 
   getSurfaceAreaCoveredByWater(diameter: string, surfaceWater: string): string {
-    if(surfaceWater === 'unknown') {
+    if (surfaceWater === 'unknown') {
       return 'unknown';
     }
 

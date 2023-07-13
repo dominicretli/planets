@@ -13,7 +13,8 @@
 
     <tr *ngFor="let planet of planets">
       <td>
-        <a href="{{planet.url}}" target="_blank" rel="noopener noreferrer" title="learn more about {{planet.name}}">{{planet.name}}</a>
+        <a href="{{planet.url}}" target="_blank" rel="noopener noreferrer"
+           title="learn more about {{planet.name}}">{{planet.name}}</a>
       </td>
       <td>{{planet.climate | unknownToQuestionMark}}</td>
       <td>{{planet.residents.length.toString() | decimalSpace}}</td>
@@ -31,6 +32,5 @@
     <p>LOADING...</p>
     <img src="assets/loading-saturn.gif">
   </div>
-
 </div>
 
