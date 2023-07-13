@@ -21,7 +21,7 @@
 }
 
 .table-container table, th, td {
-  border: 1px solid gray;
+  border: 1px solid #bfbfbf;
   border-collapse: collapse;
 }
 
