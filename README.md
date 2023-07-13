@@ -2,10 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
+## How to Run
+  - Install Node.js
+    - Recommended Node version is: `^12.20.0 || ^14.15.0 || ^16.10.0` 
+    - I tested with `v18.16.1` as well as `v16.15.1` and had no problems.
+  - Install Angular
+    - run command `npm install -g @angular/cli`
+  - Install Project Dependencies
+    - in the project directory, run command `npm install`
+  - Run the Server
+    - in the project directory, run command `ng serve`
+    - Navigate to `http://localhost:4200/`
+  - Enjoy learning about neat planets
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-Recommended Node version: ^12.20.0 || ^14.15.0 || ^16.10.0
 
 ## Code scaffolding
 
