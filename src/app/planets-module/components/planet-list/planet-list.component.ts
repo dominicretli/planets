@@ -27,7 +27,7 @@ export class PlanetListComponent implements OnInit {
   }
 
   getSurfaceAreaCoveredByWater(diameter: string, surfaceWater: string): string {
-    if (surfaceWater === 'unknown') {
+    if (diameter === 'unknown' || surfaceWater === 'unknown') {
       return 'unknown';
     }
 
