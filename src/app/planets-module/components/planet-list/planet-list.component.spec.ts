@@ -92,6 +92,16 @@ describe('PlanetListComponent', () => {
   });
 
   describe('getSurfaceAreaCoveredByWater', () => {
+    it('should return unknown if diameter is unknown', () => {
+      setup();
+
+      const diameter = 'unknown';
+      const surface_water = '50';
+      const surfaceArea = component.getSurfaceAreaCoveredByWater(diameter, surface_water);
+
+      expect(surfaceArea).toEqual('unknown');
+    });
+    
     it('should return unknown if surface_water is unknown', () => {
       setup();
 
