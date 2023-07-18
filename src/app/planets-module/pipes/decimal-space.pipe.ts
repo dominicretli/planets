@@ -2,8 +2,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {DecimalPipe} from '@angular/common';
 
 @Pipe({
-  name: 'decimalSpace',
-  pure: true
+  name: 'decimalSpace'
 })
 export class DecimalSpacePipe implements PipeTransform {
 
