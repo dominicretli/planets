@@ -66,12 +66,12 @@ describe('PlanetListComponent', () => {
   }
 
   describe('ngOnInit', () => {
-    it('should set planets from getPlanets response body', () => {
+    it('should set planets from getPlanets response body sorted by planet name ascending', () => {
       const response: PlanetsApiResponse = {
         count: 2,
         next: '',
         previous: '',
-        results: [planet1, planet2]
+        results: [planet2, planet1]
       } as PlanetsApiResponse;
 
       planetServiceSpy.getPlanets.and.returnValue(of(response));
